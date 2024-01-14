@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix chezmoi: <http://www.exemple.fr/> .
+
+
+chezmoi:MonThesaurus a skos:ConceptScheme .
+chezmoi:MonThesaurus skos:prefLabel "Le nom de mon thesaurus"@fr .
+
+
+chezmoi:Vehicule a skos:Concept .
+chezmoi:Vehicule skos:inScheme chezmoi:MonThesaurus .
+chezmoi:Vehicule skos:prefLabel "Vehicules"@fr .
+
+
+chezmoi:Voiture a skos:Concept .
+chezmoi:Voiture skos:inScheme chezmoi:MonThesaurus .
+chezmoi:Voiture skos:prefLabel "Voiture"@fr .
+chezmoi:Voiture skos:broader chezmoi:Vehicule .
+
+
+chezmoi:123456 a skos:Concept .
+chezmoi:123456 skos:inScheme chezmoi:MonThesaurus .
+chezmoi:123456 skos:prefLabel "Vélo"@fr .
+chezmoi:123456 skos:broader chezmoi:Vehicule .
